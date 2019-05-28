@@ -1,0 +1,20 @@
+---
+#https://wiki.thing-printer.com/index.php?title=Manga_Screen
+#Don't enable opengl drivers as it sticks screen in portrait
+- name: Add below block to properly rotate screen with my manga screen
+  blockinfile:
+    path: /boot/config.txt
+    block: |
+       hdmi_force_hotplug=1
+       config_hdmi_boost=4
+       overscan_left=24
+       overscan_right=24
+       overscan_top=16
+       overscan_bottom=16
+       disable_overscan=0
+       display_rotate=1
+       
+       hdmi_cvt=480 800 60 6
+       hdmi_group=2
+       hdmi_mode=87
+       hdmi_drive=2

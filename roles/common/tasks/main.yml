@@ -1,5 +1,10 @@
 ---
 
+- name: update & upgrade
+  apt:
+     update_cache: true
+     upgrade: true
+
 - name: install packages
   package: name={{ packages }} state=latest
      

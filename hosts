@@ -1,2 +1,2 @@
-[pis]
+[default]
 raspberrypi.local ansible_user=pi ansible_password=raspberry
