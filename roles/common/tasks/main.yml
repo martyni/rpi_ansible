@@ -1,0 +1,8 @@
+---
+
+- name: install packages
+  package: name={{ packages }} state=latest
+     
+- name: install python packages
+  pip: name={{ python_packages }} state=latest
+

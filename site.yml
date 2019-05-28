@@ -1,0 +1,12 @@
+---
+- hosts: default
+  become: yes
+  roles:
+    - common
+  vars:
+    packages:
+       - vim
+       - git
+    python_packages:
+       - virtualenv
+       - virtualenvwrapper
